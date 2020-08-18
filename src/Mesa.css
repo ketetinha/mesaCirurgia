@@ -1,0 +1,11 @@
+.Mesa{
+    width: 1000px;
+    height: 500px;
+    background-color: #32a85a;
+}
+
+.gridzin{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1;
+}
