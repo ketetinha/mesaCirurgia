@@ -31,18 +31,17 @@ class Mesa extends React.Component {
         this.state={
             MesaFinal: shuffle(MesaFinal),
         }
-        console.log(this.state.MesaFinal);
     }
 
     //Método que troca os instrumentos de lugar
-    handleDrop = (e, item) => {          
-        
+    handleDrop = (e, item) => {
         //Instrumento que está sendo movimentado
          let movido = {
             nome: e.dataTransfer.getData("nome"),
             função: e.dataTransfer.getData("funcao"),
             posicao: item.posicao,
             resposta: e.dataTransfer.getData("resposta"),
+             src: e.dataTransfer.getData("src")
         }
 
         //Instrumento que está sendo substituído 
@@ -51,6 +50,7 @@ class Mesa extends React.Component {
             função: item.função,
             posicao: parseInt(e.dataTransfer.getData("posicao")),
             resposta: item.resposta,
+            src: item.src
         }
         
         //Checagem de acerto para o que foi movimentado
