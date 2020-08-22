@@ -119,31 +119,31 @@ const linhaDeCima = sintese.concat(preensao,especiais);
 //Primeira parte da linha inferior
 const dierese = [
     {
-        nome: "Mayo reta",
+        nome: "Bisturi",
         função: "diérese",
         posicao: 9,
         resposta: false,
     },
     {
-        nome: "Mayo curva",
+        nome: "Mayo reta",
         função: "diérese",
         posicao: 10,
         resposta: false,
     },
     {
-        nome: "Metzembaum reta",
+        nome: "Mayo curva",
         função: "diérese",
         posicao: 11,
         resposta: false,
     },
     {
-        nome: "Metzembaum curva",
+        nome: "Metzembaum reta",
         função: "diérese",
         posicao: 12,
         resposta: false,
     },
     {
-        nome: "Bisturi",
+        nome: "Metzembaum curva",
         função: "diérese",
         posicao: 13,
         resposta: false,
@@ -181,12 +181,14 @@ const linhaDeBaixo = dierese.concat(hemostasia);
 export const MesaFinal = linhaDeCima.concat(linhaDeBaixo);
 
 //=======================Declarando os gabaritos=====================================
-const gabarito_dierese = ["Bisturi", "Mayo reta", "Mayo curva", "Metzembaum reta", "Metzembaum curva"];
-const gabarito_hemostasia = ["Hemostática Reta1","Hemostática Reta2","Hemostática Curva1","Hemostática Curva2"];
-const gabarito_linhaDeCima = ["Porta agulha de Hegar", "Porta agulha de Mathieu", "Pinça Anatômica", "Pinça Dente de rato", "Pean", "Cherron", "Backaus1", "Backaus2", "Afastador Farabeuf"];
-//Gabarito geral concatenado em um único array para a mesa do cirurgião
-export const gabarito_geral = gabarito_linhaDeCima.concat(gabarito_dierese,gabarito_hemostasia,); 
-
+//cirurgiao
+export const gc = ["Porta agulha de Hegar", "Porta agulha de Mathieu", "Pinça Anatômica", "Pinça Dente de rato",
+"Pean", "Cherron", "Backaus1", "Backaus2","Afastador Farabeuf","Bisturi", "Mayo curva", "Mayo reta",
+"Metzembaum curva", "Metzembaum reta", "Hemostática Curva1","Hemostática Curva2","Hemostática Reta1","Hemostática Reta2"]; 
+//instrumentador
+export const gi = ["Afastador Farabeuf", "Pean", "Cherron", "Backaus1", "Backaus2", "Porta agulha de Hegar",
+"Porta agulha de Mathieu", "Pinça Anatômica", "Pinça Dente de rato", "Hemostática Reta2","Hemostática Reta1",
+"Hemostática Curva2","Hemostática Curva1", "Mayo reta", "Mayo curva", "Metzembaum reta", "Metzembaum curva", "Bisturi"];
 
 //Método copiado do StackOverLoiro para randomizar o array todas as vezes
 export function shuffle(array) {

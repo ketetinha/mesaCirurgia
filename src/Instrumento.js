@@ -14,17 +14,19 @@ class Instrumento extends React.Component {
 
     render(){
         return (
+            <div>
+                <p>{this.props.inst.nome}</p>
+            <img alt={this.props.inst.nome} className="imagemInstrumento" src={this.props.inst.src}
             //propriedade draggable deixa o componente ser arrastado
-            <div draggable onDragStart={(e)=>this.onDragStart(
+            draggable onDragStart={(e)=>this.onDragStart(
                 e,
                 this.props.inst.posicao,
                 this.props.inst.nome,
                 this.props.inst.função,
                 this.props.inst.resposta,
-              this.props.inst.src
-            )}>
-                <p className="Instrumento">{this.props.inst.nome}</p>
-                <img alt="Imagem Instrumento" className="imagemInstrumento" src={this.props.inst.src}></img>
+                this.props.inst.src
+            )}
+            ></img>
             </div>
         );
     }
