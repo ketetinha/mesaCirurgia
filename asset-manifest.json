@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/mesaCirurgia/static/css/main.bb064322.chunk.css",
+    "main.js": "/mesaCirurgia/static/js/main.364194e0.chunk.js",
+    "main.js.map": "/mesaCirurgia/static/js/main.364194e0.chunk.js.map",
+    "runtime-main.js": "/mesaCirurgia/static/js/runtime-main.b8d5b149.js",
+    "runtime-main.js.map": "/mesaCirurgia/static/js/runtime-main.b8d5b149.js.map",
+    "static/js/2.c946aa40.chunk.js": "/mesaCirurgia/static/js/2.c946aa40.chunk.js",
+    "static/js/2.c946aa40.chunk.js.map": "/mesaCirurgia/static/js/2.c946aa40.chunk.js.map",
+    "index.html": "/mesaCirurgia/index.html",
+    "precache-manifest.43539393c1ea8348de160d2eb9d7f13e.js": "/mesaCirurgia/precache-manifest.43539393c1ea8348de160d2eb9d7f13e.js",
+    "service-worker.js": "/mesaCirurgia/service-worker.js",
+    "static/css/main.bb064322.chunk.css.map": "/mesaCirurgia/static/css/main.bb064322.chunk.css.map",
+    "static/js/2.c946aa40.chunk.js.LICENSE.txt": "/mesaCirurgia/static/js/2.c946aa40.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b8d5b149.js",
+    "static/js/2.c946aa40.chunk.js",
+    "static/css/main.bb064322.chunk.css",
+    "static/js/main.364194e0.chunk.js"
+  ]
+}
