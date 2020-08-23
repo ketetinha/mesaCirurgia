@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "/mesaCirurgia/static/css/main.bb064322.chunk.css",
-    "main.js": "/mesaCirurgia/static/js/main.364194e0.chunk.js",
-    "main.js.map": "/mesaCirurgia/static/js/main.364194e0.chunk.js.map",
-    "runtime-main.js": "/mesaCirurgia/static/js/runtime-main.b8d5b149.js",
-    "runtime-main.js.map": "/mesaCirurgia/static/js/runtime-main.b8d5b149.js.map",
-    "static/js/2.c946aa40.chunk.js": "/mesaCirurgia/static/js/2.c946aa40.chunk.js",
-    "static/js/2.c946aa40.chunk.js.map": "/mesaCirurgia/static/js/2.c946aa40.chunk.js.map",
+    "main.css": "/mesaCirurgia/static/css/main.f1cd027a.chunk.css",
+    "main.js": "/mesaCirurgia/static/js/main.87c9a2a0.chunk.js",
+    "main.js.map": "/mesaCirurgia/static/js/main.87c9a2a0.chunk.js.map",
+    "runtime-main.js": "/mesaCirurgia/static/js/runtime-main.cf1ea16d.js",
+    "runtime-main.js.map": "/mesaCirurgia/static/js/runtime-main.cf1ea16d.js.map",
+    "static/js/2.a8aa1fab.chunk.js": "/mesaCirurgia/static/js/2.a8aa1fab.chunk.js",
+    "static/js/2.a8aa1fab.chunk.js.map": "/mesaCirurgia/static/js/2.a8aa1fab.chunk.js.map",
     "index.html": "/mesaCirurgia/index.html",
-    "precache-manifest.43539393c1ea8348de160d2eb9d7f13e.js": "/mesaCirurgia/precache-manifest.43539393c1ea8348de160d2eb9d7f13e.js",
+    "precache-manifest.3c91ef1c650adb1162fcfd83b6d9b37f.js": "/mesaCirurgia/precache-manifest.3c91ef1c650adb1162fcfd83b6d9b37f.js",
     "service-worker.js": "/mesaCirurgia/service-worker.js",
-    "static/css/main.bb064322.chunk.css.map": "/mesaCirurgia/static/css/main.bb064322.chunk.css.map",
-    "static/js/2.c946aa40.chunk.js.LICENSE.txt": "/mesaCirurgia/static/js/2.c946aa40.chunk.js.LICENSE.txt"
+    "static/css/main.f1cd027a.chunk.css.map": "/mesaCirurgia/static/css/main.f1cd027a.chunk.css.map",
+    "static/js/2.a8aa1fab.chunk.js.LICENSE.txt": "/mesaCirurgia/static/js/2.a8aa1fab.chunk.js.LICENSE.txt",
+    "static/media/farabeuf.jpg": "/mesaCirurgia/static/media/farabeuf.75b6b331.jpg",
+    "static/media/hemo_reta.jpg": "/mesaCirurgia/static/media/hemo_reta.5bae029b.jpg",
+    "static/media/mesaC.jpg": "/mesaCirurgia/static/media/mesaC.46840bf5.jpg",
+    "static/media/mesaI.jpg": "/mesaCirurgia/static/media/mesaI.1c948c5c.jpg",
+    "static/media/porta agulha de hegar.jpg": "/mesaCirurgia/static/media/porta agulha de hegar.6794ed36.jpg",
+    "static/media/porta_agulha_M.jpg": "/mesaCirurgia/static/media/porta_agulha_M.31b3469c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b8d5b149.js",
-    "static/js/2.c946aa40.chunk.js",
-    "static/css/main.bb064322.chunk.css",
-    "static/js/main.364194e0.chunk.js"
+    "static/js/runtime-main.cf1ea16d.js",
+    "static/js/2.a8aa1fab.chunk.js",
+    "static/css/main.f1cd027a.chunk.css",
+    "static/js/main.87c9a2a0.chunk.js"
   ]
 }
