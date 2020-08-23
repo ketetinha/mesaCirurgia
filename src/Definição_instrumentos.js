@@ -125,25 +125,25 @@ const dierese = [
         resposta: false,
     },
     {
-        nome: "Mayo reta",
+        nome: "Mayo curva",
         função: "diérese",
         posicao: 10,
         resposta: false,
     },
     {
-        nome: "Mayo curva",
+        nome: "Mayo reta",
         função: "diérese",
         posicao: 11,
         resposta: false,
     },
     {
-        nome: "Metzembaum reta",
+        nome: "Metzembaum curva",
         função: "diérese",
         posicao: 12,
         resposta: false,
     },
     {
-        nome: "Metzembaum curva",
+        nome: "Metzembaum reta",
         função: "diérese",
         posicao: 13,
         resposta: false,
@@ -152,25 +152,25 @@ const dierese = [
 //Segunda parte da linha inferior
 const hemostasia = [
     {
-        nome: "Hemostática Reta1",
+        nome: "Hemostática Curva1",
         função: "hemostasia",
         posicao: 14,
         resposta: false,
     },
     {
-        nome: "Hemostática Reta2",
+        nome: "Hemostática Curva2",
         função: "hemostasia",
         posicao: 15,
         resposta: false,
     },
     {
-        nome: "Hemostática Curva1",
+        nome: "Hemostática Reta1",
         função: "hemostasia",
         posicao: 16,
         resposta: false,
     },
     {
-        nome: "Hemostática Curva2",
+        nome: "Hemostática Reta2",
         função: "hemostasia",
         posicao: 17,
         resposta: false,
@@ -178,7 +178,7 @@ const hemostasia = [
 ];
 
 const linhaDeBaixo = dierese.concat(hemostasia);
-export const MesaFinal = linhaDeCima.concat(linhaDeBaixo);
+export const MesaFinal = linhaDeBaixo.concat(linhaDeCima);
 
 //=======================Declarando os gabaritos=====================================
 //cirurgiao

@@ -2,6 +2,7 @@ import React from 'react';
 import Switch from 'react-switch';
 import './Mesa.css';
 import Forma from './Forma';
+import Resposta from './Resposta';
 
 //Importando os instrumentos de outro arquivo
 import {MesaFinal} from './Definição_instrumentos';
@@ -10,20 +11,30 @@ import {gc} from './Definição_instrumentos';
 import {gi} from './Definição_instrumentos';
 
 //Importando imagens
-import bisturi from './imagens/bisturi loiro.jpeg'
-import mayoloira from './imagens/mayoloira.jpeg'
-import metzembaum from './imagens/metzembaum loira.jpeg'
-import pAHegar from './imagens/porta agulha de hegar.jpeg'
-/* 
+import bisturi from './imagens/cabo_bisturi.jpg';
+import mayoc from './imagens/mayo_curva.jpg';
+import mayor from './imagens/mayo_reta.jpg';
+import metzembaumc from './imagens/metzembaum curva.jpg';
+import metzembaumr from './imagens/metzembaum reta.jpg';
+import hemoc from './imagens/hemo_curva.jpg';
+import hemor from './imagens/hemo_reta.jpg';
+import paHegar from './imagens/porta agulha de hegar.jpg';
+import paM from './imagens/porta_agulha_M.jpg';
+import pinçaA from './imagens/pinça_anatômica.jpg';
+import pinçaR from './imagens/pinça_dente.jpg';
+import pean from './imagens/pean.jpg';
+import cherron from './imagens/cherron.jpg';
+import backaus from './imagens/backaus.jpg';
+import farabeuf from './imagens/farabeuf.jpg';
+
 //Colocando as imagens em um array para passar para os componentes filhos
-const imagens = [bisturi, mayoloira, metzembaum, pAHegar, pAHegar, pAHegar, pAHegar, pAHegar,
-     pAHegar, pAHegar, pAHegar, pAHegar, pAHegar, pAHegar, pAHegar,pAHegar,pAHegar,pAHegar];
+const imagens = [bisturi, mayoc, mayor, metzembaumc, metzembaumr, hemoc, hemoc, hemor, hemor, paHegar, paM,
+    pinçaA, pinçaR, pean, cherron, backaus, backaus, farabeuf];
 
 //Colocando as imagens como o source dos instrumentos
 for(let i=0; i<MesaFinal.length; i++){
     MesaFinal[i].src = imagens[i];
 }
- */
 /* 
     Componente "Mesa" que simplesmente renderiza todos os outros componentes e mantêm controle
     sobre a posição de todos os componentes. É o mastermind do estado do jogo.
@@ -35,6 +46,7 @@ class Mesa extends React.Component {
             checked: true,
             Mesa: shuffle(MesaFinal),
             gabarito: this.montarMesa(true),
+            verGabarito: false,
         }
     }
 
@@ -119,6 +131,10 @@ class Mesa extends React.Component {
             });
     }
 
+    handleGabarito = () => {
+        //let mudança = !(this.state.verGabarito)
+        this.setState({verGabarito: !(this.state.verGabarito)});
+    }
 
     render(){
         return (
@@ -157,6 +173,8 @@ class Mesa extends React.Component {
                     <li>Por lógica, quando estiver errado, haverá uma borda vermelha indicando;</li>
                     <li>É apenas isso. Bom treinamento.</li>
                 </ul>
+                <button onClick={this.handleGabarito}>Ver gabarito:</button>
+                {!this.state.verGabarito ? null : <Resposta/>}
             </div>
         );
     }
