@@ -55,24 +55,28 @@ const sintese = [
         função: "síntese",
         posicao: 0,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Porta agulha de Mathieu",
         função: "síntese",
         posicao: 1,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Pinça Anatômica",
         função: "síntese",
         posicao: 2,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Pinça Dente de rato",
         função: "síntese",
         posicao: 3,
         resposta: false,
+        virada: false,
     },
 
 ]
@@ -83,24 +87,28 @@ const preensao = [
         função: "Preensão",
         posicao: 4,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Cherron",
         função: "Preensão",
         posicao: 5,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Backaus1",
         função: "Preensão",
         posicao: 6,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Backaus2",
         função: "Preensão",
         posicao: 7,
         resposta: false,
+        virada: false,
     },
 ]
 //Terceira parte da linha superior
@@ -110,6 +118,7 @@ const especiais = [
         função: "Especial",
         posicao: 8,
         resposta: false,
+        virada: false,
     },
 ]
 
@@ -123,30 +132,35 @@ const dierese = [
         função: "diérese",
         posicao: 9,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Mayo curva",
         função: "diérese",
         posicao: 10,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Mayo reta",
         função: "diérese",
         posicao: 11,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Metzembaum curva",
         função: "diérese",
         posicao: 12,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Metzembaum reta",
         função: "diérese",
         posicao: 13,
         resposta: false,
+        virada: false,
     },
 ];
 //Segunda parte da linha inferior
@@ -156,24 +170,28 @@ const hemostasia = [
         função: "hemostasia",
         posicao: 14,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Hemostática Curva2",
         função: "hemostasia",
         posicao: 15,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Hemostática Reta1",
         função: "hemostasia",
         posicao: 16,
         resposta: false,
+        virada: false,
     },
     {
         nome: "Hemostática Reta2",
         função: "hemostasia",
         posicao: 17,
         resposta: false,
+        virada: false,
     },
 ];
 

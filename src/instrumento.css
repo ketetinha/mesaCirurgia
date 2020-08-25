@@ -1,4 +1,23 @@
+.container{
+    transition: 1s;
+    width:100%;
+    perspective: 500px;
+}
+
 .imagemInstrumento{
     width: 100%;
     height: 250px;
+} 
+
+.face{
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.face p{
+    padding: 5px;
+}
+
+.virada{
+    transform: rotateY(180deg);
 }

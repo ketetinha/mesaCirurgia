@@ -113,6 +113,7 @@ class Mesa extends React.Component {
         let mesa = this.state.Mesa;
         for(let i=0; i<mesa.length; i++){
             mesa[i].resposta = false;
+            mesa[i].virada = false;
         }
         this.setState({Mesa: shuffle(mesa)});
     }
@@ -122,6 +123,7 @@ class Mesa extends React.Component {
         let mesa = this.state.Mesa;
         for(let i=0; i<mesa.length; i++){
             mesa[i].resposta = false;
+            mesa[i].virada = false;
         }
         this.setState(
             {
@@ -134,6 +136,13 @@ class Mesa extends React.Component {
     handleGabarito = () => {
         //let mudança = !(this.state.verGabarito)
         this.setState({verGabarito: !(this.state.verGabarito)});
+    }
+
+
+    handleClick2 = (posicao) => {
+        let newMesa = this.state.Mesa;
+        newMesa[posicao].virada = !newMesa[posicao].virada;
+        this.setState({Mesa: newMesa});
     }
 
     render(){
@@ -159,6 +168,7 @@ class Mesa extends React.Component {
                         resposta = {item.resposta}
                         handleDrop={(e)=>this.handleDrop(e, item)}
                         handleDragOver={(e)=>this.handleDragOver(e)}
+                        handleC={(posicao)=>this.handleClick2(posicao)}
                         key={item.nome} 
                         inst={item} 
                     ></Forma>)
