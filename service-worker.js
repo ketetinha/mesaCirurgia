@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mesaCirurgia/precache-manifest.d1d3af7660182c78881607d7d1f8283a.js"
+  "/mesaCirurgia/precache-manifest.34e1b059fb425d9467d1619d35aeb5cd.js"
 );
 
 self.addEventListener('message', (event) => {
