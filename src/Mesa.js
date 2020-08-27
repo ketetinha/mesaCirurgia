@@ -47,6 +47,7 @@ class Mesa extends React.Component {
             Mesa: shuffle(MesaFinal),
             gabarito: this.montarMesa(true),
             verGabarito: false,
+            finalizou: false, 
         }
     }
 
@@ -100,8 +101,18 @@ class Mesa extends React.Component {
         newState[item.posicao] = movido;
         newState[parseInt(e.dataTransfer.getData("posicao"))] = estatico;
 
+        let finalizou = true;
+        for(let i=0; i<newState.length; i++){
+            //se estiver false(errado), dou um break
+            if(!newState[i].resposta){
+                finalizou = false;
+                break;
+            }
+        }
+
+        console.log(this.state.finalizou);
         //Altero o estado e renderizo novamente a tela
-        this.setState({dierese: newState});
+        this.setState({dierese: newState, finalizou: finalizou});
     }
 
     //não sei para que serve, mas precisa estar aqui pelo visto
@@ -115,7 +126,7 @@ class Mesa extends React.Component {
             mesa[i].resposta = false;
             mesa[i].virada = false;
         }
-        this.setState({Mesa: shuffle(mesa)});
+        this.setState({Mesa: shuffle(mesa), finalizou: false});
     }
 
     handleChange = (checked) => {
@@ -129,7 +140,8 @@ class Mesa extends React.Component {
             {
                 checked: checked,
                 Mesa: shuffle(mesa),
-                gabarito: gabarito 
+                gabarito: gabarito,
+                finalizou: false, 
             });
     }
 
@@ -150,6 +162,7 @@ class Mesa extends React.Component {
             <div className="Mesa">
                 <div className="header">
                     <h1 >Mesa do {this.state.checked ? "Cirurgião" : "Auxiliar/Instrumentador"}</h1>
+                    {this.state.finalizou ? <h2>Parabéns!</h2> : null}
                     <div>
                         <button className="btn_reset" onClick={this.handleClick}>Reiniciar</button>
                         <Switch 
