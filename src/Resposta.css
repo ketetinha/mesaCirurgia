@@ -1,23 +1,43 @@
-.flexbox{
-    margin: 10px;
-    display: flex;
-    justify-content: space-between;
+@media(max-width: 813px){    
+    .cirurgiao{
+        background-image: url("./imagens/mesaC.jpg");
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .auxiliar{
+        background-image: url("./imagens/mesaI.jpg");
+        width: 100%;
+        height: 500px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
 
-.cirurgiao{
-    background-image: url("./imagens/mesaC.jpg");
-    width: 500px;
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: inline-block;
-}
-
-.auxiliar{
-    background-image: url("./imagens/mesaI.jpg");
-    width: 500px;
-    height: 300px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display:inline-block;
+@media(min-width: 814px){
+    .flexbox{
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .cirurgiao{
+        background-image: url("./imagens/mesaC.jpg");
+        width: 500px;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: inline-block;
+    }
+    
+    .auxiliar{
+        background-image: url("./imagens/mesaI.jpg");
+        width: 500px;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display:inline-block;
+    }
 }

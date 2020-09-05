@@ -87,7 +87,7 @@ class Mesa extends React.Component {
             movido.resposta = resposta_nova;
         }
 
-        //Checagem de acerto para o que foi movimetado de tabela (aka estatico)
+        //Checagem de acerto para o que foi movimentado de tabela (aka estatico)
         if(item.nome===this.state.gabarito[e.dataTransfer.getData("posicao")]){
             resposta_nova = true;
             estatico.resposta = resposta_nova;
@@ -112,7 +112,7 @@ class Mesa extends React.Component {
 
         console.log(this.state.finalizou);
         //Altero o estado e renderizo novamente a tela
-        this.setState({dierese: newState, finalizou: finalizou});
+        this.setState({Mesa: newState, finalizou: finalizou});
     }
 
     //não sei para que serve, mas precisa estar aqui pelo visto
@@ -194,6 +194,7 @@ class Mesa extends React.Component {
                     <li>Os objetos deverão ser colocados na ordem correta de acordo com a opção que você escolher( Cirurgião ou Instrumentador);</li>
                     <li>Ele não apresentará a borda vermelha quando encaixar ele na posição correta;</li>
                     <li>Por lógica, quando estiver errado, haverá uma borda vermelha indicando;</li>
+                    <li>Clicando na carta do instrumento, você poderá ver seus detalhes(nome e função);</li>
                     <li>É apenas isso. Bom treinamento.</li>
                 </ul>
                 <button onClick={this.handleGabarito}>Ver gabarito:</button>

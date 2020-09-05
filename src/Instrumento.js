@@ -1,5 +1,6 @@
 import React from 'react';
 import './instrumento.css';
+import { Draggable } from 'react-touch';
 
 class Instrumento extends React.Component {
 
@@ -35,5 +36,23 @@ class Instrumento extends React.Component {
         );
     }
 }
+
+class Finalizado extends React.Component {
+    render(){
+        return (
+            <Draggable style={{translateX: 150, translateY: 200}}>
+  {({translateX, translateY}) => {
+    return (
+      <div style={{transform: `translate3d(${translateX}px, ${translateY}px, 0)`}}>
+        <Instrumento />
+      </div>
+    );
+  }}
+</Draggable>
+        )
+    }
+}
+
+
 
 export default Instrumento;
