@@ -204,8 +204,8 @@ export const gc = ["Porta agulha de Hegar", "Porta agulha de Mathieu", "Pinça A
 "Pean", "Cherron", "Backaus1", "Backaus2","Afastador Farabeuf","Bisturi", "Mayo curva", "Mayo reta",
 "Metzembaum curva", "Metzembaum reta", "Hemostática Curva1","Hemostática Curva2","Hemostática Reta1","Hemostática Reta2"]; 
 //instrumentador
-export const gi = ["Afastador Farabeuf", "Pean", "Cherron", "Backaus1", "Backaus2", "Porta agulha de Hegar",
-"Porta agulha de Mathieu", "Pinça Anatômica", "Pinça Dente de rato", "Hemostática Reta2","Hemostática Reta1",
+export const gi = ["Afastador Farabeuf", "Cherron", "Pean", "Backaus1", "Backaus2", "Pinça Dente de rato" ,
+"Pinça Anatômica", "Porta agulha de Mathieu", "Porta agulha de Hegar", "Hemostática Reta2","Hemostática Reta1",
 "Hemostática Curva2","Hemostática Curva1", "Mayo reta", "Mayo curva", "Metzembaum reta", "Metzembaum curva", "Bisturi"];
 
 //Método copiado do StackOverLoiro para randomizar o array todas as vezes
