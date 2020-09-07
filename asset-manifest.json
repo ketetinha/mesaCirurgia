@@ -1,27 +1,33 @@
 {
   "files": {
-    "main.css": "/mesaCirurgia/static/css/main.50daa6df.chunk.css",
-    "main.js": "/mesaCirurgia/static/js/main.d6e563fa.chunk.js",
-    "main.js.map": "/mesaCirurgia/static/js/main.d6e563fa.chunk.js.map",
+    "main.css": "/mesaCirurgia/static/css/main.a65fd86d.chunk.css",
+    "main.js": "/mesaCirurgia/static/js/main.4c25bb2b.chunk.js",
+    "main.js.map": "/mesaCirurgia/static/js/main.4c25bb2b.chunk.js.map",
     "runtime-main.js": "/mesaCirurgia/static/js/runtime-main.cf1ea16d.js",
     "runtime-main.js.map": "/mesaCirurgia/static/js/runtime-main.cf1ea16d.js.map",
-    "static/js/2.7a41c3f0.chunk.js": "/mesaCirurgia/static/js/2.7a41c3f0.chunk.js",
-    "static/js/2.7a41c3f0.chunk.js.map": "/mesaCirurgia/static/js/2.7a41c3f0.chunk.js.map",
+    "static/js/2.ccc9554f.chunk.js": "/mesaCirurgia/static/js/2.ccc9554f.chunk.js",
+    "static/js/2.ccc9554f.chunk.js.map": "/mesaCirurgia/static/js/2.ccc9554f.chunk.js.map",
     "index.html": "/mesaCirurgia/index.html",
-    "precache-manifest.34e1b059fb425d9467d1619d35aeb5cd.js": "/mesaCirurgia/precache-manifest.34e1b059fb425d9467d1619d35aeb5cd.js",
+    "precache-manifest.2a04bd547325e026364f29b6e2383d05.js": "/mesaCirurgia/precache-manifest.2a04bd547325e026364f29b6e2383d05.js",
     "service-worker.js": "/mesaCirurgia/service-worker.js",
-    "static/css/main.50daa6df.chunk.css.map": "/mesaCirurgia/static/css/main.50daa6df.chunk.css.map",
-    "static/js/2.7a41c3f0.chunk.js.LICENSE.txt": "/mesaCirurgia/static/js/2.7a41c3f0.chunk.js.LICENSE.txt",
-    "static/media/farabeuf.jpg": "/mesaCirurgia/static/media/farabeuf.75b6b331.jpg",
-    "static/media/hemo_reta.jpg": "/mesaCirurgia/static/media/hemo_reta.5bae029b.jpg",
+    "static/css/main.a65fd86d.chunk.css.map": "/mesaCirurgia/static/css/main.a65fd86d.chunk.css.map",
+    "static/js/2.ccc9554f.chunk.js.LICENSE.txt": "/mesaCirurgia/static/js/2.ccc9554f.chunk.js.LICENSE.txt",
+    "static/media/backaus.jpg": "/mesaCirurgia/static/media/backaus.fbb35e0f.jpg",
+    "static/media/cherron.jpg": "/mesaCirurgia/static/media/cherron.db1d89d8.jpg",
+    "static/media/farabeuf.jpg": "/mesaCirurgia/static/media/farabeuf.6c929c93.jpg",
+    "static/media/hemo_curva.jpg": "/mesaCirurgia/static/media/hemo_curva.776419d2.jpg",
+    "static/media/hemo_reta.jpg": "/mesaCirurgia/static/media/hemo_reta.2de67476.jpg",
     "static/media/Resposta.css": "/mesaCirurgia/static/media/mesaI.1c948c5c.jpg",
+    "static/media/pean.jpg": "/mesaCirurgia/static/media/pean.fab0cf06.jpg",
+    "static/media/pinça_anatômica.jpg": "/mesaCirurgia/static/media/pinça_anatômica.d0adae4c.jpg",
+    "static/media/pinça_dente.jpg": "/mesaCirurgia/static/media/pinça_dente.0b052fa2.jpg",
     "static/media/porta agulha de hegar.jpg": "/mesaCirurgia/static/media/porta agulha de hegar.6794ed36.jpg",
     "static/media/porta_agulha_M.jpg": "/mesaCirurgia/static/media/porta_agulha_M.31b3469c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.cf1ea16d.js",
-    "static/js/2.7a41c3f0.chunk.js",
-    "static/css/main.50daa6df.chunk.css",
-    "static/js/main.d6e563fa.chunk.js"
+    "static/js/2.ccc9554f.chunk.js",
+    "static/css/main.a65fd86d.chunk.css",
+    "static/js/main.4c25bb2b.chunk.js"
   ]
 }
