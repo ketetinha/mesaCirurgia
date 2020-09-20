@@ -1,6 +1,7 @@
 import React from 'react';
 import './Forma.css';
 import Instrumento from './Instrumento';
+import { Droppable } from 'react-beautiful-dnd';
 
 class Forma extends React.Component {
     constructor(){
@@ -19,19 +20,29 @@ class Forma extends React.Component {
             return "errado";
         }
     }
+
     render(){
         return (
-            <div 
-            className= {`droppable ${this.definindoClasse()}`} 
-            onDrop={this.props.handleDrop}
-            onDragOver={this.props.handleDragOver} 
-            onClick={(posicao)=>this.props.handleC(this.props.inst.posicao)}
-            >
-                <Instrumento 
-                inst={this.props.inst} 
-                posicao={this.props.inst.posicao} 
-                key={this.props.inst.nome} />
-            </div>
+            <Droppable droppableId={this.props.inst.nome}>
+                {(provided) => (
+                    <div
+                    //props do react-beautiful-dnd
+                    {...provided.droppableProps}
+                    ref={provided.innerRef}
+                    // 
+                    className= {`droppable ${this.definindoClasse()}`} 
+                    onDrop={this.props.handleDrop}
+                    onDragOver={this.props.handleDragOver} 
+                    onClick={(posicao)=>this.props.handleC(this.props.inst.posicao)}
+                    >
+                        {provided.placeholder}
+                        <Instrumento 
+                        inst={this.props.inst} 
+                        posicao={this.props.inst.posicao} 
+                        key={this.props.inst.nome} />
+                    </div>
+                )}
+            </Droppable>
         )
     }
 }

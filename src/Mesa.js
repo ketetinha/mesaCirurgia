@@ -3,6 +3,7 @@ import Switch from 'react-switch';
 import './Mesa.css';
 import Forma from './Forma';
 import Resposta from './Resposta';
+import {DragDropContext} from 'react-beautiful-dnd';
 
 //Importando os instrumentos de outro arquivo
 import {MesaFinal} from './Definição_instrumentos';
@@ -41,7 +42,7 @@ for(let i=0; i<MesaFinal.length; i++){
 */
 class Mesa extends React.Component { 
     constructor(props){
-        super(props);
+        super();
         this.state={
             checked: true,
             Mesa: shuffle(MesaFinal),
@@ -55,64 +56,6 @@ class Mesa extends React.Component {
     montarMesa = (checked) => {
         //TRUE: cirurgiao e FALSE: auxiliar
         return checked ? gc : gi;
-    }
-
-    //Método que troca os instrumentos de lugar
-    handleDrop = (e, item) => {
-        //Instrumento que está sendo movimentado
-         let movido = {
-            nome: e.dataTransfer.getData("nome"),
-            função: e.dataTransfer.getData("funcao"),
-            posicao: item.posicao,
-            resposta: e.dataTransfer.getData("resposta"),
-            src: e.dataTransfer.getData("src")
-        }
-
-        //Instrumento que está sendo substituído 
-        let estatico = {
-            nome: item.nome,
-            função: item.função,
-            posicao: parseInt(e.dataTransfer.getData("posicao")),
-            resposta: item.resposta,
-            src: item.src
-        }
-        
-        //Checagem de acerto para o que foi movimentado
-        let resposta_nova;
-        if(e.dataTransfer.getData("nome")===this.state.gabarito[item.posicao]){
-            resposta_nova = true;
-            movido.resposta = resposta_nova;
-        } else {
-            resposta_nova = false;
-            movido.resposta = resposta_nova;
-        }
-
-        //Checagem de acerto para o que foi movimentado de tabela (aka estatico)
-        if(item.nome===this.state.gabarito[e.dataTransfer.getData("posicao")]){
-            resposta_nova = true;
-            estatico.resposta = resposta_nova;
-        } else {
-            resposta_nova = false;
-            estatico.resposta = resposta_nova;
-        }
-
-        //Copio o estado atual da Mesa e faço as devidas alterações.
-        let newState = this.state.Mesa;
-        newState[item.posicao] = movido;
-        newState[parseInt(e.dataTransfer.getData("posicao"))] = estatico;
-
-        let finalizou = true;
-        for(let i=0; i<newState.length; i++){
-            //se estiver false(errado), dou um break
-            if(!newState[i].resposta){
-                finalizou = false;
-                break;
-            }
-        }
-
-        console.log(this.state.finalizou);
-        //Altero o estado e renderizo novamente a tela
-        this.setState({Mesa: newState, finalizou: finalizou});
     }
 
     //não sei para que serve, mas precisa estar aqui pelo visto
@@ -157,8 +100,65 @@ class Mesa extends React.Component {
         this.setState({Mesa: newMesa});
     }
 
+    onDragEnd = (result) =>{
+        const { destination, source } = result;
+        if(!destination) return; //se a pessoa jogar em um local que não encaixa
+        if(destination.index === source.index){
+            return;
+        } //se a pessoa colocar o instrumento no mesmo lugar
+        //Instrumento que está sendo movimentado
+        let movido = this.state.Mesa[source.index];
+
+        //Instrumento que está sendo substituído 
+        let estatico = this.state.Mesa[destination.index];
+
+        //trocando as posições dos instrumentos movimentados
+        let tmp = movido.posicao;
+        movido.posicao = estatico.posicao;
+        estatico.posicao = tmp;
+
+        //Checagem de acerto para o que foi movimentado
+        let resposta_nova;
+        if(movido.nome===this.state.gabarito[movido.posicao]){
+            resposta_nova = true;
+            movido.resposta = resposta_nova;
+        } else {
+            resposta_nova = false;
+            movido.resposta = resposta_nova;
+        }
+
+        //Checagem de acerto para o que foi movimentado de tabela (aka estatico)
+        if(estatico.nome===this.state.gabarito[estatico.posicao]){
+            resposta_nova = true;
+            estatico.resposta = resposta_nova;
+        } else {
+            resposta_nova = false;
+            estatico.resposta = resposta_nova;
+        }
+
+        //Copio o estado atual da Mesa e faço as devidas alterações.
+        let newState = this.state.Mesa;
+        newState[movido.index] = movido;
+        newState[estatico.index] = estatico;
+
+        let finalizou = true;
+        for(let i=0; i<newState.length; i++){
+            //se estiver false(errado), dou um break
+            if(!newState[i].resposta){
+                finalizou = false;
+                break;
+            }
+        }
+
+        console.log(newState);
+        //Altero o estado e renderizo novamente a tela
+        this.setState({Mesa: newState, finalizou: finalizou});
+
+    }
+
     render(){
         return (
+            
             <div className="Mesa">
                 <div className="header">
                     <h1 >Mesa do {this.state.checked ? "Cirurgião" : "Auxiliar/Instrumentador"}</h1>
@@ -174,19 +174,22 @@ class Mesa extends React.Component {
                         />
                     </div>
                 </div>
-                <div className="gridzin">
-                    {
-                    this.state.Mesa.map((item)=>
-                    <Forma
-                        resposta = {item.resposta}
-                        handleDrop={(e)=>this.handleDrop(e, item)}
-                        handleDragOver={(e)=>this.handleDragOver(e)}
-                        handleC={(posicao)=>this.handleClick2(posicao)}
-                        key={item.nome} 
-                        inst={item} 
-                    ></Forma>)
-                    }
-                </div>
+                <DragDropContext onDragEnd={this.onDragEnd}>
+                    <div className="gridzin">
+                        {
+                        this.state.Mesa.map((item, index)=>
+                        <Forma
+                            resposta = {item.resposta}
+                            handleDrop={(e)=>this.handleDrop(e, item)}
+                            handleDragOver={(e)=>this.handleDragOver(e)}
+                            handleC={(posicao)=>this.handleClick2(posicao)}
+                            key={item.nome} 
+                            inst={item} 
+                            index={index} //aqui eu passo a posição ??? pensar melhor nas soluções
+                        ></Forma>)
+                        }
+                    </div>
+                </DragDropContext>
                 <p>OBS: Não está ideal para treinar a mesa do instrumentador ainda.</p>
                 <p>OBS2: Quando o jogo começa, mesmo que um instrumento esteja no lugar certo, ele vai ficar como errado. Cabe a você organizar todos eles para saber se estão certos ou não.</p>
                 <p>Regras:</p>
@@ -205,3 +208,6 @@ class Mesa extends React.Component {
 }
 
 export default Mesa;
+
+
+
