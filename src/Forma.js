@@ -26,14 +26,14 @@ class Forma extends React.Component {
             <Droppable droppableId={this.props.inst.nome}>
                 {(provided) => (
                     <div
-                    //props do react-beautiful-dnd
+                    //react-beautiful-dnd's props
                     {...provided.droppableProps}
                     ref={provided.innerRef}
-                    // 
+                    //my props
                     className= {`droppable ${this.definindoClasse()}`} 
                     onDrop={this.props.handleDrop}
                     onDragOver={this.props.handleDragOver} 
-                    onClick={(posicao)=>this.props.handleC(this.props.inst.posicao)}
+                    onClick={(posicao)=>this.props.virarCarta(this.props.inst.posicao)}
                     >
                         {provided.placeholder}
                         <Instrumento 
