@@ -1,7 +1,13 @@
 import React from 'react';
-import './Forma.css';
-import Instrumento from './Instrumento';
+
+// external APIs
 import { Droppable } from 'react-beautiful-dnd';
+
+// components
+import Instrumento from './../Instrumento';
+
+// assets
+import './Forma.css';
 
 class Forma extends React.Component {
     constructor(){

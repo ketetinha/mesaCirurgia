@@ -19,7 +19,13 @@ body{
 
 .gridzin{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (min-width: 768px) {
+    .gridzin {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 }
 
 .exemplo{

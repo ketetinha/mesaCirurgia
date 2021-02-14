@@ -1,32 +1,38 @@
 import React from 'react';
+
+// external APIs
 import Switch from 'react-switch';
+import { DragDropContext } from 'react-beautiful-dnd';
+
+// components
+import Forma from './../Forma';
+import Resposta from './../Resposta';
+
+// helpers
+import {
+    MesaFinal,
+    shuffle,
+    gc,
+    gi
+} from './../../helpers';
+
+// assets
 import './Mesa.css';
-import Forma from './Forma';
-import Resposta from './Resposta';
-import {DragDropContext} from 'react-beautiful-dnd';
-
-//Importando os instrumentos de outro arquivo
-import {MesaFinal} from './Definição_instrumentos';
-import {shuffle} from './Definição_instrumentos';
-import {gc} from './Definição_instrumentos';
-import {gi} from './Definição_instrumentos';
-
-//Importando imagens
-import bisturi from './imagens/cabo_bisturi.jpg';
-import mayoc from './imagens/mayo_curva.jpg';
-import mayor from './imagens/mayo_reta.jpg';
-import metzembaumc from './imagens/metzembaum curva.jpg';
-import metzembaumr from './imagens/metzembaum reta.jpg';
-import hemoc from './imagens/hemo_curva.jpg';
-import hemor from './imagens/hemo_reta.jpg';
-import paHegar from './imagens/porta agulha de hegar.jpg';
-import paM from './imagens/porta_agulha_M.jpg';
-import pinçaA from './imagens/pinça_anatômica.jpg';
-import pinçaR from './imagens/pinça_dente.jpg';
-import pean from './imagens/pean.jpg';
-import cherron from './imagens/cherron.jpg';
-import backaus from './imagens/backaus.jpg';
-import farabeuf from './imagens/farabeuf.jpg';
+import bisturi from './../../assets/images/cabo_bisturi.jpg';
+import mayoc from './../../assets/images/mayo_curva.jpg';
+import mayor from './../../assets/images/mayo_reta.jpg';
+import metzembaumc from './../../assets/images/metzembaum curva.jpg';
+import metzembaumr from './../../assets/images/metzembaum reta.jpg';
+import hemoc from './../../assets/images/hemo_curva.jpg';
+import hemor from './../../assets/images/hemo_reta.jpg';
+import paHegar from './../../assets/images/porta agulha de hegar.jpg';
+import paM from './../../assets/images/porta_agulha_M.jpg';
+import pinçaA from './../../assets/images/pinça_anatômica.jpg';
+import pinçaR from './../../assets/images/pinça_dente.jpg';
+import pean from './../../assets/images/pean.jpg';
+import cherron from './../../assets/images/cherron.jpg';
+import backaus from './../../assets/images/backaus.jpg';
+import farabeuf from './../../assets/images/farabeuf.jpg';
 
 //Colocando as imagens em um array para passar para os componentes filhos
 const imagens = [bisturi, mayoc, mayor, metzembaumc, metzembaumr, hemoc, hemoc, hemor, hemor, paHegar, paM,
@@ -43,7 +49,7 @@ for(let i=0; i<MesaFinal.length; i++){
 class Mesa extends React.Component { 
     constructor(props){
         super();
-        this.state={
+        this.state = {
             checked: true,
             Mesa: shuffle(MesaFinal),
             gabarito: this.montarMesa(true),

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Mesa from './Mesa';
+import Mesa from './components/Mesa';
 
 
 ReactDOM.render(

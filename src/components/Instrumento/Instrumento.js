@@ -1,6 +1,10 @@
 import React from 'react';
-import './instrumento.css';
+
+// external APIs
 import { Draggable } from 'react-beautiful-dnd';
+
+// assets
+import './instrumento.css';
 
 class Instrumento extends React.Component {
     render(){

@@ -209,26 +209,24 @@ export const gi = ["Afastador Farabeuf", "Cherron", "Pean", "Backaus1", "Backaus
 "Hemostática Curva2","Hemostática Curva1", "Mayo reta", "Mayo curva", "Metzembaum reta", "Metzembaum curva", "Bisturi"];
 
 //Método copiado do StackOverLoiro para randomizar o array todas as vezes
-export function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
+export const shuffle = (arr) => {
+    var currentIndex = arr.length, temporaryValue, randomIndex;
   
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-  
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
   
       // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+      temporaryValue = arr[currentIndex];
+      arr[currentIndex] = arr[randomIndex];
+      arr[randomIndex] = temporaryValue;
 
       //Ajustando a posicao em cada objeto para deixar bacaninha pro estado
-      array[currentIndex].posicao = currentIndex;
-      array[randomIndex].posicao = randomIndex;
-
+      arr[currentIndex].posicao = currentIndex;
+      arr[randomIndex].posicao = randomIndex;
     }
   
-    return array;
-  }
+    return arr;
+}
